@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DongwonEnc</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+  <link rel="stylesheet" type="text/css" href="/css/base.css" />
+  <link rel="stylesheet" type="text/css" href="/css/font.css" />
+  <link rel="stylesheet" type="text/css" href="/css/common.css" />
+  <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" /> -->
+  <link rel="stylesheet" type="text/css" href="/js/jquery-ui.css" />
+  <link rel="stylesheet" type="text/css" href="/css/layout.css" />
+  <link rel="stylesheet" type="text/css" href="/css/board.css" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="/css/content.css" />
+
+  <!-- chart css  -->
+  <link rel="stylesheet" href="https://unpkg.com/charts.css/dist/charts.min.css">
+
+  <script type="text/javascript" src="/js/jquery.bxslider.js"></script>
+  <script type="text/javascript" src="/js/jquery-ui.js"></script>
+  <script type="text/javascript" src="/js/base.js"></script>
+  <script type="text/javascript" src="/js/module.js"></script>
+  <script type="text/javascript" src="/js/custom.js"></script>
+  <script type="text/javascript" src="/js/typeit.min.js"></script>
+  <script type="text/javascript" src="/js/jquery-inertiaScroll.js"></script>
+  <script type="text/javascript" src="/js/ScrollToPlugin.min.js"></script>
+  <script type="text/javascript" src="/js/TweenMax.min.js"></script>
+  <script type="text/javascript" src="/js/anime.min.js"></script>
+
+  <!-- <link rel="stylesheet" href="css/ccbr.css"> -->
+
+  <style>
+    /* html,body{font-ssize: 6.25%;} */
+    html,
+    body {
+      font-size: 1rem;
+    }
+  </style>
+
+  <!-- Bootstrap  -->
+  <link rel="stylesheet" href="./css/bootstrap.css">
+
+  <!-- Splide 4.1.3 -->
+  <link rel="stylesheet" href="/css/splide.min.css">
+
+  <!-- Remix icon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <!-- designer styling  -->
+  <link rel="stylesheet" href="./css/design.css">
+
+
+</head>
+
+<body>
+
+<header>
+  <nav id="navbar" class="navbar navbar-expand-lg fixed-top bg-nav-transparant">
+    <div class="container-fluid justify-content-between px-3 px-lg-5">
+      <a id="logo-white" class="navbar-brand " href="#">
+        <img src="./images/navbar-logo-white.png" alt="Dongwon-logo" height="50">
+      </a>
+      <a id="logo-color" class="navbar-brand " href="#">
+        <img src="./images/navbar-logo-color.png" alt="Dongwon-logo" height="50">
+      </a>
+      <button class="navbar-toggler focus-ring focus-ring-light my-2 mx-2" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNavbarToggler"
+        aria-controls="mobileNavbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse px-3 px-lg-0 pb-4 pb-lg-0" id="mobileNavbarToggler">
+        <ul class="navbar-nav mt-4 mt-lg-0 ms-auto me-auto mb-2 mb-lg-0 gap-4">
+          <li class="nav-item">
+            <a class="nav-link text-white" aria-current="page" href="#">회사소개</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">사업영역</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">시공사례</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">컨설팅/견적문의</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">태양광발전 바로알기</a>
+          </li>
+        </ul>
+        <div class="d-flex flex-row justify-content-between justify-content-lg-start align-items-lg-center mt-4 mt-lg-0">
+          <div class="dropdown select-lang">
+            <a  id="btn-lang"  class="btn btn-outline-light text-white btn-lang-transparant dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <img src="./images/icon-world_select-lang.svg" id="icon-lang-white" class="d-inline-block " width="14" height="14" alt="">
+              <img src="./images/icon-world_select-lang-black.svg" id="icon-lang-black" class="d-none" width="14" height="14" alt=""> KOR
+            </a>
+          
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="#">KOR</a></li>
+              <li><a class="dropdown-item" href="#">ENG</a></li>
+            </ul>
+          </div>
+          <a href="#" id="btn-manager" class="btn btn-outline-light d-flex align-items-center text-white">
+            <i class="ri-login-box-line"></i>&nbsp;
+            <p class="mb-0">관리자</p>
+          </a>
+          <a href="#" id="btn-menu-offcanvas" class="d-none d-lg-block btn btn-outline-light text-white" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
+          aria-controls="offcanvasMenu"><i class="ri-menu-3-line"></i></a>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-body">
+      <div class="w-75 mt-4">
+        <img src="./images/navbar-logo-color.png" class="img-fluid " alt="">
+      </div>
+      
+      <ul class="nav flex-column mt-4">
+        <li class="nav-item">
+          <a class="nav-link text" href="#">회사소개</a>
+          <ul>
+            <li>
+              <a class="nav-link" href="#">인사말</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#">회사연혁도</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#">조직도</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#">보유인증서</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#">보유인증서</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#">찾아오시는 길</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">사업영역</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">시공사례</a>
+          <ul>
+            <li>
+              <a class="nav-link" href="#">토지</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#">건물 태양광</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">컨설팅/견적문의</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">태양광발전 바로알기</a>
+          <ul>
+            <li>
+              <a class="nav-link" href="#">컨설팅/견적문의</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#">제품소개</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+</header>
+
+  <div class="hero main-page">
+    <div class="text-center">
+      <h3>태양광 문화를 이끄는 기업 동원이엔씨</h3>
+      <h4 class="text-white fw-semibold">고객의 20년, 행복할 수 있도록 동원이엔씨가 책임지겠습니다.</h4>
+    </div>
+  </div>
+
+  <main>
+
+    <section class="projects">
+      <div class="container tittle-container">
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <h3 class="section-tittle">Projects</h3>
+            <h5 class="section-sub-tittle">태양광 문화를 이끄는 동원이엔씨 프로젝트 실적</h5>
+          </div>
+          <a href="#" class="btn btn-outline-dark more-btn mt-3 ">MORE</a>
+        </div>
+      </div>
+      <div class="container-fluid container-slider px-lg-0">
+
+        <section id="project-list-container" class="splide project-slider" aria-label="Basic Structure">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                
+                <div class="project-item-1 px-4 d-flex flex-column flex-md-row flex-lg-row justify-content-end justify-content-md-between justify-content-lg-between align-items-md-end align-items-lg-end">
+                  <p class="text-white mb-2 mb-md-4 mb-lg-4">온누리 태양광발전소/1.4MW</p>
+                  <div class="d-flex flex-row align-items-lg-center gap-lg-2 mb-3 mb-lg-4">
+                    <div>
+                      <img src="./images/icon-location_product-section.svg" class="d-block" width="20" cheight="26" alt="">
+                    </div>
+                    <p class="text-white mb-0">경북 구미 옥성면</p>
+                  </div>
+                </div>
+                
+              </li>
+              <li class="splide__slide">
+                
+                <div class="project-item-2 px-4 d-flex flex-column flex-md-row flex-lg-row justify-content-end justify-content-md-between justify-content-lg-between align-items-md-end align-items-lg-end">
+                  <p class="text-white mb-2 mb-md-4 mb-lg-4">온누리 태양광발전소/1.4MW</p>
+                  <div class="d-flex flex-row align-items-lg-center gap-lg-2 mb-3 mb-lg-4">
+                    <div>
+                      <img src="./images/icon-location_product-section.svg" width="20" height="26" alt="">
+                    </div>
+                    <p class="text-white mb-0">경북 구미 옥성면</p>
+                  </div>
+                </div>
+
+              </li>
+              <li class="splide__slide">
+                
+                <div class="project-item-3 px-4 d-flex flex-column flex-md-row flex-lg-row justify-content-end justify-content-md-between justify-content-lg-between align-items-md-end align-items-lg-end">
+                  <p class="text-whitemb-2 mb-md-4 mb-lg-4">온누리 태양광발전소/1.4MW</p>
+                  <div class="d-flex flex-row align-items-lg-center gap-lg-2 mb-3 mb-lg-4">
+                    <div>
+                      <img src="./images/icon-location_product-section.svg"  width="20" height="26" alt="">
+                    </div>
+                    <p class="text-white mb-0">경북 구미 옥성면</p>
+                  </div>
+                </div>
+
+              </li>
+              <li class="splide__slide">
+                
+                <div class="project-item-1 px-4 d-flex flex-column flex-md-row flex-lg-row justify-content-end justify-content-md-between justify-content-lg-between align-items-md-end align-items-lg-end">
+                  <p class="text-white mb-2 mb-md-4 mb-lg-4">온누리 태양광발전소/1.4MW</p>
+                  <div class="d-flex flex-row align-items-lg-center gap-lg-2 mb-3 mb-lg-4">
+                    <div>
+                      <img src="./images/icon-location_product-section.svg"  width="20" height="26" alt="">
+                    </div>
+                    <p class="text-white mb-0">경북 구미 옥성면</p>
+                  </div>
+                </div>
+                
+              </li>
+              <li class="splide__slide">
+                
+                <div class="project-item-2 px-4 d-flex flex-column flex-md-row flex-lg-row justify-content-end justify-content-md-between justify-content-lg-between align-items-md-end align-items-lg-end">
+                  <p class="text-white mb-2 mb-md-4 mb-lg-4">온누리 태양광발전소/1.4MW</p>
+                  <div class="d-flex flex-row align-items-lg-center gap-lg-2 mb-3 mb-lg-4">
+                    <div>
+                      <img src="./images/icon-location_product-section.svg" width="20" height="26" alt="">
+                    </div>
+                    <p class="text-white mb-0">경북 구미 옥성면</p>
+                  </div>
+                </div>
+
+              </li>
+              <li class="splide__slide">
+
+                <div class="project-item-3 px-4 d-flex flex-column flex-md-row flex-lg-row justify-content-end justify-content-md-between justify-content-lg-between align-items-md-end align-items-lg-end">
+                  <p class="text-white mb-2 mb-md-4 mb-lg-4">온누리 태양광발전소/1.4MW</p>
+                  <div class="d-flex flex-row align-items-lg-center gap-lg-2 mb-3 mb-lg-4">
+                    <div>
+                      <img src="./images/icon-location_product-section.svg"  width="20" height="26" alt="">
+                    </div>
+                    <p class="text-white mb-0">경북 구미 옥성면</p>
+                  </div>
+                </div>
+
+              </li>
+            </ul>
+          </div>
+        </section>
+
+      </div>
+    </section>
+
+    <section class="business">
+      <div class="container tittle-container">
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <h3 class="section-tittle">Business</h3>
+            <h5 class="section-sub-tittle">동원이엔씨는 고객의 20년을 행복할 수 있도록 다양한 사업으로 최선을 다하고 있습니다.</h5>
+          </div>
+          <a href="#" class="btn btn-outline-dark more-btn mt-3 ">MORE</a>
+        </div>
+      </div>
+      <div class="container-fluid business-item">
+        <div class="row">
+          <div class="col-12 col-lg p-0 m-0">
+            <img src="./images/busines-01.jpg" class="img-fluid" alt="image-business-section-01">
+          </div>
+          <div class="col-12 col-lg p-0 m-0">
+            <img src="./images/busines-02.jpg" class="img-fluid" alt="image-business-section-02">
+          </div>
+          <div class="col-12 col-lg p-0 m-0">
+            <img src="./images/busines-03.jpg" class="img-fluid" alt="image-business-section-03">
+          </div>
+          <div class="col-12 col-lg p-0 m-0">
+            <img src="./images/busines-04.jpg" class="img-fluid" alt="image-business-section-04">
+          </div>
+          <div class="col-12 col-lg  p-0 m-0">
+            <img src="./images/busines-05.jpg" class="img-fluid" alt="image-business-section-05">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="information">
+      <div class="container section-tittle">
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <h3 class="section-tittle mb-0">SMP/REC <span>정보</span></h3>
+          </div>
+          <select class="form-select w-auto h-auto mt-1" aria-label="information-option">
+            <option value="통합" selected>통합</option>
+            <option value="육지">육지</option>
+            <option value="제주">제주</option>
+          </select>
+        </div>
+      </div>
+      <div class="container information-content">
+        <div class="row">
+          <div class="col-lg-6">
+            <hr>
+            <div class="row information-item">
+              <div class="col-lg-6 smp-item-container">
+                <h5>SMP</h5>
+                <p class="mb-0">2023.11.27 (윈)</p>
+              </div>
+              <div class="col-lg-6">
+                <div class="d-flex flex-row gap-lg-3 justify-content-end mt-4 mt-lg-0">
+                  <h4 class="mt-1">+29,25</h4>
+                  <h3>130,63</h3>
+                </div>
+                <p class="text-end mb-0">윈 /kWh</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row information-item">
+              <div class="col-lg-6">
+                <h5>REC</h5>
+                <p class="mb-0">2023.11.23 (목)</p>
+              </div>
+              <div class="col-lg-6">
+                <div class="d-flex flex-row gap-lg-3 justify-content-end mt-4 mt-lg-0">
+                  <h4 class="mt-1">+29,25</h4>
+                  <h3>80,299</h3>
+                </div>
+                <p class="text-end mb-0">윈 /kWh</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row information-item">
+              <div class="col-lg-6">
+                <h5>SMP+ (RECX1.0)</h5>
+                <select class="form-select w-auto h-auto " aria-label="REC option">
+                  <option value="REC 가중지 1.0" selected>REC 가중지 1.0</option>
+                  <option value="REC 가중지 2.0" selected>REC 가중지 2.0</option>
+                  <option value="REC 가중지 3.0" selected>REC 가중지 3.0</option>
+                </select>
+              </div>
+              <div class="col-lg-6">
+                <div class="d-flex flex-row gap-lg-3 justify-content-end mt-4 mt-lg-0">
+                  <h3>80,299</h3>
+                </div>
+                <p class="text-end mb-0">윈 /kWh</p>
+              </div>
+            </div>
+            <hr>
+          </div>
+          <div class="col-lg-6">
+            <div class="h-100 d-flex justify-content-center align-items-center mt-4 mt-lg-0">
+              
+              <!-- chart  -->
+              <div class="w-100 px-1 px-lg-2">
+                <canvas id="smpChart"></canvas>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="online-inquiry">
+      <div class="container-fluid inquiry-bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="d-flex flex-column justify-content-center">
+                <h3>컨설팅 견적문의</h3>
+                <!-- <a href="#" type="button" class="btn btn-light text-center">견적문의</a> -->
+              </div>
+            </div>
+            <div class="col-lg-12 text-center text-lg-start">
+              <a href="#" type="button" class="btn btn-light text-center">견적문의</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="news">
+      <div class="container tittle-container">
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <h3 class="section-tittle">태양광발전 바로알기</h3>
+          </div>
+          <a href="#" class="btn btn-outline-dark more-btn mt-3">MORE</a>
+        </div>
+      </div>
+      <div class="container">
+        
+      
+      <section id="news-list" class="splide mt-2 mt-lg-5" aria-label="Basic Structure ">
+        
+        <div class="splide__arrows">
+          <button class="splide__arrow splide__arrow--prev">
+            <img src="./images/icon-left-arrow_news.svg" alt="">
+          </button>
+          <button class="splide__arrow splide__arrow--next">
+            <img src="./images/icon-right-arrow_news.svg" alt="">
+          </button>
+        </div>
+        
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <div class="splide__slide__container">
+                <div class="row">
+                  <div class="col-lg-2 order-last order-lg-first ">
+                    <div class="card news">
+                      <div class="card-body">
+                        <div class="h-100 d-flex flex-column align-items-start ">
+                          <div>
+                            <p class="card-text">전문가의 전략적 분석,고객의 최대 이익이것이 원칙입니다</p>
+                          </div>
+                          <div class="mt-auto w-100">
+                            <p class="pt-2 mb-0 border-top">2023/12/18</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-10 order-first order-lg-last">
+                    <img src="./images/news03.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="splide__slide__container">
+                <div class="row">
+                  <div class="col-lg-2 order-last order-lg-first ">
+                    <div class="card news">
+                      <div class="card-body">
+                        <div class="h-100 d-flex flex-column align-items-start ">
+                          <div>
+                            <p class="card-text">전문가의 전략적 분석,고객의 최대 이익이것이 원칙입니다</p>
+                          </div>
+                          <div class="mt-auto w-100">
+                            <p class="pt-2 mb-0 border-top">2023/12/18</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-10 order-first order-lg-last">
+                    <img src="./images/news02.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="splide__slide__container">
+                <div class="row">
+                  <div class="col-lg-2 order-last order-lg-first ">
+                    <div class="card news">
+                      <div class="card-body">
+                        <div class="h-100 d-flex flex-column align-items-start ">
+                          <div>
+                            <p class="card-text">전문가의 전략적 분석,고객의 최대 이익이것이 원칙입니다</p>
+                          </div>
+                          <div class="mt-auto w-100">
+                            <p class="pt-2 mb-0 border-top">2023/12/18</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-10 order-first order-lg-last">
+                    <img src="./images/news01.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      </div>
+    </section>
+
+    <section class="related-sites">
+      <div class="container">
+        <h3>관련사이트</h3>
+        <div id="related-site_slider" class="splide" role="group" aria-label="Splide Basic HTML Example">
+          <div class="splide__arrows">
+            <button class="splide__arrow splide__arrow--prev">
+              <img src="./images/icon-left_related-site.svg" height="32px" alt="">
+            </button>
+            <button class="splide__arrow splide__arrow--next">
+              <img src="./images/icon-right_related-site.svg" height="32px" alt="">
+            </button>
+          </div>
+
+          <div class="splide__track mt-4">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <img src="./images/related-site-01.jpg" class="img-fluid " alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="./images/related-site-02.jpg" class="img-fluid " alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="./images/related-site-03.jpg" class="img-fluid " alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="./images/related-site-04.jpg" class="img-fluid " alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="./images/related-site-05.jpg" class="img-fluid " alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="./images/related-site-06.jpg" class="img-fluid " alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="./images/related-site-07.jpg" class="img-fluid " alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="./images/related-site-08.jpg" class="img-fluid " alt="">
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <div class="go-to-top position-relative">
+    <a href="#" class="btn btn-light position-absolute d-flex gap-1">
+      <p class="mb-0">TOP</p>
+      <i class="ri-arrow-up-line"></i>
+    </a>
+  </div>
+
+  <footer class="container-fluid ">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10">
+          <div class="row">
+            <div class=" col-lg-2">
+              <div class="text-center text-lg-start ">
+                <img src="./images/footer-logo-white.svg" class="footer-logo" alt="">
+              </div>
+            </div>
+            <div class="col-lg-10">
+              <div class="d-flex flex-column flex-md-row flex-lg-row align-items-center align-items-md-center h-100 gap-3 mt-4 mt-lg-0">
+                <p class="text-center text-lg-start">㈜동원이엔씨</p>
+                <div class="vr align-self-center opacity-100 d-none d-md-block " ></div>
+                <p class="text-center text-lg-start">대표&nbsp; :&nbsp; 강준호</p> 
+                <div class="vr align-self-center opacity-100 d-none d-md-block " ></div>
+                <p class="text-center text-lg-start">사업자번호&nbsp; :&nbsp; 314-81-91485</p> 
+                <div class="vr align-self-center opacity-100 d-none d-md-block " ></div>
+                <p class="text-center text-lg-start">TEL&nbsp; :&nbsp; 042-823-0799</p> 
+                <div class="vr align-self-center opacity-100 d-none d-md-block " ></div>
+                <p class="text-center text-lg-start">FAX&nbsp; :&nbsp; 042-527-0112</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="d-flex flex-column flex-lg-row gap-3 mt-3 mt-md-4 mt-lg-3">
+            <p class="text-center text-lg-start ">E-Mail&nbsp; :&nbsp; dwenc01@hanmail.net</p>
+            <div class="vr align-self-center opacity-100 d-none d-lg-block " ></div>
+            <p class="text-center text-lg-start">주소&nbsp; :&nbsp; 34705, 대전광역시 동구 산내로 1305번길 61, 2층(낭월동)</p>
+            <div class="vr align-self-center opacity-100 d-none d-lg-block " ></div>
+            <p class="text-center text-lg-start">Copyright© DONGWONEnC. All Rights Reserved. Designed by KOWEB.</p>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="d-flex justify-content-center justify-content-lg-end gap-2 mt-4 mt-lg-0">
+            <a href="#"><img src="./images/footer-icon-youtube.png" class="img-fluid" alt=""></a>
+            <a href="#"><img src="./images/footer-icon-instagram.png" class="img-fluid" alt=""></a>
+            <a href="#"><img src="./images/footer-icon-facebook.png" class="img-fluid" alt=""></a>
+            <a href="#"><img src="./images/footer-icon-twitter.png" class="img-fluid" alt=""></a>
+          </div>
+          <select class="form-select mt-4 mt-lg-3 w-auto mx-auto me-lg-0" aria-label="family-site" data-bs-theme="dark">
+            <option value="패밀리 사이트" selected>패밀리 사이트</option>
+            <option value="패밀리 사이트 2" selected>패밀리 사이트 2.0</option>
+            <option value="패밀리 사이트 3" selected>패밀리 사이트 3.0</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+  <!-- Bootsrap v5.3.2 js-bundle -->
+  <script src="./js/bootstrap.bundle.js"></script>
+
+  <!-- chart js  -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Splide 4.1.3 -->
+  <script src="./js/splide.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+
+  <script src="./js/design.js"></script>
+  
+</body>
+</html>

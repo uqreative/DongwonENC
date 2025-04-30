@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DongwonEnc</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+  <link rel="stylesheet" type="text/css" href="/css/base.css" />
+  <link rel="stylesheet" type="text/css" href="/css/font.css" />
+  <link rel="stylesheet" type="text/css" href="/css/common.css" />
+  <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" /> -->
+  <link rel="stylesheet" type="text/css" href="/js/jquery-ui.css" />
+  <link rel="stylesheet" type="text/css" href="/css/layout.css" />
+  <link rel="stylesheet" type="text/css" href="/css/board.css" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="/css/content.css" />
+
+  <script type="text/javascript" src="/js/jquery.bxslider.js"></script>
+  <script type="text/javascript" src="/js/jquery-ui.js"></script>
+  <script type="text/javascript" src="/js/base.js"></script>
+  <script type="text/javascript" src="/js/module.js"></script>
+  <script type="text/javascript" src="/js/custom.js"></script>
+  <script type="text/javascript" src="/js/typeit.min.js"></script>
+  <script type="text/javascript" src="/js/jquery-inertiaScroll.js"></script>
+  <script type="text/javascript" src="/js/ScrollToPlugin.min.js"></script>
+  <script type="text/javascript" src="/js/TweenMax.min.js"></script>
+  <script type="text/javascript" src="/js/anime.min.js"></script>
+
+  <!-- <link rel="stylesheet" href="css/ccbr.css"> -->
+
+  <style>
+    /* html,body{font-ssize: 6.25%;} */
+    html,
+    body {
+      font-size: 1rem;
+    }
+  </style>
+
+  <!-- Bootstrap  -->
+  <link rel="stylesheet" href="./css/bootstrap.css">
+
+  <!-- aos v.2  -->
+  <link rel="stylesheet" href="./css/aos.css" />
+
+  <!-- Splide 4.1.3 -->
+  <link rel="stylesheet" href="./css/splide.min.css">
+
+  <!-- Remix icon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <!-- designer styling  -->
+  <link rel="stylesheet" href="./css/design.css">
+
+
+</head>
+
+<body>
+
+  <header>
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top bg-nav-transparant">
+      <div class="container-fluid justify-content-between px-3 px-lg-5">
+        <a id="logo-white" class="navbar-brand " href="#">
+          <img src="./images/navbar-logo-white.png" alt="Dongwon-logo" height="50">
+        </a>
+        <a id="logo-color" class="navbar-brand " href="#">
+          <img src="./images/navbar-logo-color.png" alt="Dongwon-logo" height="50">
+        </a>
+        <button class="navbar-toggler focus-ring focus-ring-light my-2 mx-2" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNavbarToggler"
+          aria-controls="mobileNavbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse px-3 px-lg-0 pb-4 pb-lg-0" id="mobileNavbarToggler">
+          <ul class="navbar-nav mt-4 mt-lg-0 ms-auto me-auto mb-2 mb-lg-0 gap-4">
+            <li class="nav-item">
+              <a class="nav-link text-white" aria-current="page" href="#">회사소개</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">사업영역</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">시공사례</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">컨설팅/견적문의</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">태양광발전 바로알기</a>
+            </li>
+          </ul>
+          <div class="d-flex flex-row justify-content-between justify-content-lg-start align-items-lg-center mt-4 mt-lg-0">
+            <div class="dropdown select-lang me-4">
+              <a  id="btn-lang"  class="btn btn-outline-light text-white btn-lang-transparant dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <img src="./images/icon-world_select-lang.svg" id="icon-lang-white" class="d-inline-block " width="14" height="14" alt="">
+                <img src="./images/icon-world_select-lang-black.svg" id="icon-lang-black" class="d-none" width="14" height="14" alt=""> KOR
+              </a>
+            
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">KOR</a></li>
+                <li><a class="dropdown-item" href="#">ENG</a></li>
+              </ul>
+            </div>
+            <a href="#" id="btn-manager" class="btn btn-outline-light d-flex align-items-center text-white me-lg-5">
+              <i class="ri-login-box-line"></i>&nbsp;
+              <p class="mb-0">관리자</p>
+            </a>
+            <a href="#" id="btn-menu-offcanvas" class="d-none d-lg-block btn btn-outline-light text-white" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
+            aria-controls="offcanvasMenu"><i class="ri-menu-3-line"></i></a>
+
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-body">
+        <div class="w-50 ">
+          <img src="./images/navbar-logo-color.png" class="img-fluid " alt="">
+        </div>
+        <div class="row mt-5">
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-lg-12">
+                <a href="#"><h3 class="fs-4 ">회사소개</h3></a>
+              </div>
+              <div class="col-lg-12">
+                <div class="d-flex flex-column ms-3 gap-3 ">
+                  <a href="#">인사말</a>
+                  <a href="#">회사연혁도</a>
+                  <a href="#">조직도</a>
+                  <a href="#">보유인증서</a>
+                  <a href="#">보유인증서</a>
+                  <a href="#">찾아오시는 길</a>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-5">
+              <div class="col-lg-12">
+                <a href="#"><h3 class="fs-4 ">사업영역</h3></a>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-lg-12">
+                <a href="#"><h3 class="fs-4 ">시공사례</h3></a>
+              </div>
+              <div class="col-lg-12">
+                <div class="d-flex flex-column ms-3 gap-3 ">
+                  <a href="#">토지</a>
+                  <a href="#">건물 태양광</a>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-lg-12">
+                <a href="#"><h3 class="fs-4 ">컨설팅/견적문의</h3></a>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-lg-12">
+              <a href="#"><h3 class="fs-4 ">태양광발전 바로알기</h3></a>
+            </div>
+            <div class="col-lg-12">
+              <div class="d-flex flex-column ms-3 gap-3 ">
+                <a href="#">컨설팅/견적문의</a>
+                <a href="#">제품소개</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8"></div>
+        </div>
+      </div>
+    </div>
+
+
+  </header>
+
+
+  <div class="hero about-us">
+    <div class="text-center">
+      <h3>회사소개</h3>
+      <h4 class="text-white fw-semibold">고객의 20년, 행복할 수 있도록 동원이엔씨가 책임지겠습니다.</h4>
+    </div>
+  </div>
+
+  <div class="container-fluid sub-menu">
+    <div class="container sub-menu">
+      <ul class="nav nav-pills nav-fill justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">인사말</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">회사연혁도</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">조직도</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">보유인증서</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">기업동향</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">찾아오시는 길</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <main class="about-greetings">
+    <section class="container-fluid greetings py-0">
+        <div class="container">
+          <h3 class="about-tit" id="image01-trigger" 
+          data-aos="fade-up"
+          data-aos-delay="300"
+          data-aos-easing="ease-in-out"
+          data-aos-duration="700"
+          >행복한 기업이 행복한 발전소를 <br>
+            행복한 발전소가 발전주에게 <span><strong>행복</strong></span>을 줍니다</h3>
+            <div
+              data-aos="fade-up"
+              data-aos-offset="200"
+              data-aos-delay="50"
+              data-aos-duration="700"
+              data-aos-easing="ease-in-out"
+              data-aos-mirror="true"
+              data-aos-once="false"
+              data-aos-anchor="#image01-trigger"
+              data-aos-anchor-placement="top-center"
+            >
+              <img src="./images/content/img_company0101.jpg" class="img-fluid " alt="">
+            </div>
+            <div class="greetings-quote d-flex flex-lg-row gap-lg-4  justify-content-center"
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-easing="ease-in-out"
+            data-aos-duration="700"
+            >
+              <div>
+                <img src="./images/content/img_company0103.svg" width="56" class=" rotary-sun" alt="">
+              </div>
+              <div>
+                <h4>신뢰와 기술을 바탕으로</h4>
+                <h5>동원의 이념으로 신재생에너지 사업의 중심을 지키겠습니다.</h5>
+              </div>
+            </div>
+
+            <p class="signature text-center mb-0"
+            data-aos="fade-up"
+            data-aos-delay="550"
+            data-aos-easing="ease-in-out"
+            data-aos-duration="700"
+            >대표이사<span><img src="./images/content/img_company0102.png" alt=""></span>올림</p>
+        </div>
+    </section>
+  </main>
+
+  <!-- go to top btn  -->
+  <div class="go-to-top position-relative">
+    <a href="#" class="btn btn-light position-absolute d-flex gap-1">
+      <p class="mb-0">TOP</p>
+      <i class="ri-arrow-up-line"></i>
+    </a>
+  </div>
+
+  <footer class="container-fluid ">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10">
+          <div class="row">
+            <div class=" col-lg-2">
+              <div class="text-center text-lg-start ">
+                <img src="./images/footer-logo-white.svg" class="footer-logo" alt="">
+              </div>
+            </div>
+            <div class="col-lg-10">
+              <div class="d-flex flex-column flex-md-row flex-lg-row align-items-center align-items-md-center h-100 gap-3 mt-4 mt-lg-0">
+                <p class="text-center text-lg-start">㈜동원이엔씨</p>
+                <div class="vr align-self-center opacity-100 d-none d-md-block " ></div>
+                <p class="text-center text-lg-start">대표&nbsp; :&nbsp; 강준호</p> 
+                <div class="vr align-self-center opacity-100 d-none d-md-block " ></div>
+                <p class="text-center text-lg-start">사업자번호&nbsp; :&nbsp; 314-81-91485</p> 
+                <div class="vr align-self-center opacity-100 d-none d-md-block " ></div>
+                <p class="text-center text-lg-start">TEL&nbsp; :&nbsp; 042-823-0799</p> 
+                <div class="vr align-self-center opacity-100 d-none d-md-block " ></div>
+                <p class="text-center text-lg-start">FAX&nbsp; :&nbsp; 042-527-0112</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="d-flex flex-column flex-lg-row gap-3 mt-3 mt-md-4 mt-lg-3">
+            <p class="text-center text-lg-start ">E-Mail&nbsp; :&nbsp; dwenc01@hanmail.net</p>
+            <div class="vr align-self-center opacity-100 d-none d-lg-block " ></div>
+            <p class="text-center text-lg-start">주소&nbsp; :&nbsp; 34705, 대전광역시 동구 산내로 1305번길 61, 2층(낭월동)</p>
+            <div class="vr align-self-center opacity-100 d-none d-lg-block " ></div>
+            <p class="text-center text-lg-start">Copyright© DONGWONEnC. All Rights Reserved. Designed by KOWEB.</p>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="d-flex justify-content-center justify-content-lg-end gap-2 mt-4 mt-lg-0">
+            <a href="#"><img src="./images/footer-icon-youtube.png" class="img-fluid" alt=""></a>
+            <a href="#"><img src="./images/footer-icon-instagram.png" class="img-fluid" alt=""></a>
+            <a href="#"><img src="./images/footer-icon-facebook.png" class="img-fluid" alt=""></a>
+            <a href="#"><img src="./images/footer-icon-twitter.png" class="img-fluid" alt=""></a>
+          </div>
+          <select class="form-select mt-4 mt-lg-3 w-auto mx-auto me-lg-0" aria-label="family-site" data-bs-theme="dark">
+            <option value="패밀리 사이트" selected>패밀리 사이트</option>
+            <option value="패밀리 사이트 2" selected>패밀리 사이트 2.0</option>
+            <option value="패밀리 사이트 3" selected>패밀리 사이트 3.0</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  
+  <!-- Bootsrap v5.3.2 js-bundle -->
+  <script src="./js/bootstrap.bundle.js"></script>
+  
+  <!-- aos v.2  -->
+  <script src="./js/aos.js"></script>
+  
+  <!-- Splide 4.1.3 -->
+  <script src="./js/splide.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+  
+  <script src="./js/design.js"></script>
+  
+  </body>
+  </html>
